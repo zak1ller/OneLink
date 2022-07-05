@@ -1,0 +1,12 @@
+"LinkShortSizeErrorMessage" = "링크가 너무 짧아요. 한 글자 이상 입력해주세요.";
+"DescriptionShortSizeErrorMessage" = "설명이 너무 짧아요. 한 글자 이상 입력해주세요.";
+"DescriptionLongSizeErrorMessage" = "설명이 너무 길어요. 최대 100글자 이내로 입력해주세요.";
+"HomeNavTitle" = "나의 링크";
+"TypeLinkText" = "링크";
+"TypeDescriptionText" = "설명";
+"Confirm" = "확인";
+"Alert" = "알림";
+"NewLinkAdded" = "새로운 링크가 등록되었습니다.";
+"SaveButton" = "저장";
+"AddFavorateMessage" = "항목에 대한 즐겨찾기가 활상화되었습니다.";
+"InvalidUrlErrorMessage" = "유효하지 않은 링크입니다. 올바른 링크 주소를 입력해주세요.";

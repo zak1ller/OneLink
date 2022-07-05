@@ -1,0 +1,10 @@
+"LinkShortSizeErrorMessage" = "The link is too short. Please enter at least one character.";
+"DescriptionShortSizeErrorMessage" = "The description is too short. Please enter at least one character.";
+"DescriptionLongSizeErrorMessage" = "The description is too long. Please enter up to 100 characters.";
+"HomeNavTitle" = "My linkgs";
+"Confirm" = "Confirm";
+"Alert" = "Alert";
+"NewLinkAdded" = "A new link has been registered.";
+"SaveButton" = "Save";
+"AddFavorateMessage" = "Favorites for the item have been activated.";
+"InvalidUrlErrorMessage" = "Invalid url. Please enter the correct url.";

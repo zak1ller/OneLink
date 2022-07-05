@@ -7,18 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CF927D72429BC21F06F2B23 /* Pods_OneLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F57C7C5935456AC4A230EE /* Pods_OneLink.framework */; };
+		711B7658286F4D0C00404846 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B7657286F4D0C00404846 /* Link.swift */; };
+		711B765B286F519F00404846 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 711B765D286F519F00404846 /* Localizable.strings */; };
+		711B7660286F524100404846 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B765F286F524100404846 /* StringExtension.swift */; };
+		711B7662286F5AA700404846 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B7661286F5AA700404846 /* Manager.swift */; };
 		71505DAC286F4ABD00BCD741 /* OneLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71505DAB286F4ABD00BCD741 /* OneLinkApp.swift */; };
-		71505DAE286F4ABD00BCD741 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71505DAD286F4ABD00BCD741 /* ContentView.swift */; };
+		71505DAE286F4ABD00BCD741 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71505DAD286F4ABD00BCD741 /* HomeView.swift */; };
 		71505DB0286F4ABE00BCD741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71505DAF286F4ABE00BCD741 /* Assets.xcassets */; };
 		71505DB3286F4ABE00BCD741 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71505DB2286F4ABE00BCD741 /* Preview Assets.xcassets */; };
+		71623B8228706D0800BF4236 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71623B8128706D0800BF4236 /* AddView.swift */; };
+		71623B8428706D3700BF4236 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71623B8328706D3700BF4236 /* FloatingButton.swift */; };
+		71623B8628717A8500BF4236 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71623B8528717A8500BF4236 /* ColorExtension.swift */; };
+		71623B8828717B4600BF4236 /* TypeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71623B8728717B4600BF4236 /* TypeTextField.swift */; };
+		7190E3282873063800E7FC68 /* LinkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7190E3272873063800E7FC68 /* LinkRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711B7657286F4D0C00404846 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		711B765C286F519F00404846 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		711B765E286F51A200404846 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		711B765F286F524100404846 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		711B7661286F5AA700404846 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		71505DA8286F4ABD00BCD741 /* OneLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71505DAB286F4ABD00BCD741 /* OneLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLinkApp.swift; sourceTree = "<group>"; };
-		71505DAD286F4ABD00BCD741 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71505DAD286F4ABD00BCD741 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		71505DAF286F4ABE00BCD741 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71505DB2286F4ABE00BCD741 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71623B8128706D0800BF4236 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		71623B8328706D3700BF4236 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		71623B8528717A8500BF4236 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		71623B8728717B4600BF4236 /* TypeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTextField.swift; sourceTree = "<group>"; };
+		7190E3272873063800E7FC68 /* LinkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRow.swift; sourceTree = "<group>"; };
+		7402A60496A8A6EBD3D48D0D /* Pods-OneLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLink.release.xcconfig"; path = "Target Support Files/Pods-OneLink/Pods-OneLink.release.xcconfig"; sourceTree = "<group>"; };
+		B6F57C7C5935456AC4A230EE /* Pods_OneLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9E22AEF433D9E22C07D2C1B /* Pods-OneLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLink.debug.xcconfig"; path = "Target Support Files/Pods-OneLink/Pods-OneLink.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +49,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF927D72429BC21F06F2B23 /* Pods_OneLink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711B764F286F4C1500404846 /* Resouseces */ = {
+			isa = PBXGroup;
+			children = (
+				71505DAF286F4ABE00BCD741 /* Assets.xcassets */,
+				711B765D286F519F00404846 /* Localizable.strings */,
+			);
+			path = Resouseces;
+			sourceTree = "<group>";
+		};
+		711B7650286F4C2100404846 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				71623B8028706CFB00BF4236 /* Home */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		711B7651286F4C3400404846 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				71505DAB286F4ABD00BCD741 /* OneLinkApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		711B7652286F4C7200404846 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				711B7656286F4CEE00404846 /* Custom View */,
+				711B7655286F4CAB00404846 /* Extension */,
+				711B7653286F4C8E00404846 /* Model */,
+				711B7654286F4C9400404846 /* ViewModifier */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		711B7653286F4C8E00404846 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				711B7657286F4D0C00404846 /* Link.swift */,
+				711B7661286F5AA700404846 /* Manager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		711B7654286F4C9400404846 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		711B7655286F4CAB00404846 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				711B765F286F524100404846 /* StringExtension.swift */,
+				71623B8528717A8500BF4236 /* ColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		711B7656286F4CEE00404846 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				71623B8328706D3700BF4236 /* FloatingButton.swift */,
+				71623B8728717B4600BF4236 /* TypeTextField.swift */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
 		71505D9F286F4ABD00BCD741 = {
 			isa = PBXGroup;
 			children = (
 				71505DAA286F4ABD00BCD741 /* OneLink */,
 				71505DA9286F4ABD00BCD741 /* Products */,
+				DC1D1D2DA5B87F81D0BA9878 /* Pods */,
+				E894556F5604FF45C08FD91E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +147,10 @@
 		71505DAA286F4ABD00BCD741 /* OneLink */ = {
 			isa = PBXGroup;
 			children = (
-				71505DAB286F4ABD00BCD741 /* OneLinkApp.swift */,
-				71505DAD286F4ABD00BCD741 /* ContentView.swift */,
-				71505DAF286F4ABE00BCD741 /* Assets.xcassets */,
+				711B7651286F4C3400404846 /* Application */,
+				711B7650286F4C2100404846 /* User Interface */,
+				711B7652286F4C7200404846 /* Helper */,
+				711B764F286F4C1500404846 /* Resouseces */,
 				71505DB1286F4ABE00BCD741 /* Preview Content */,
 			);
 			path = OneLink;
@@ -67,6 +164,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		71623B8028706CFB00BF4236 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				71505DAD286F4ABD00BCD741 /* HomeView.swift */,
+				71623B8128706D0800BF4236 /* AddView.swift */,
+				7190E3272873063800E7FC68 /* LinkRow.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DC1D1D2DA5B87F81D0BA9878 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9E22AEF433D9E22C07D2C1B /* Pods-OneLink.debug.xcconfig */,
+				7402A60496A8A6EBD3D48D0D /* Pods-OneLink.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E894556F5604FF45C08FD91E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6F57C7C5935456AC4A230EE /* Pods_OneLink.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71505DB6286F4ABE00BCD741 /* Build configuration list for PBXNativeTarget "OneLink" */;
 			buildPhases = (
+				A3F537926D51E3CC3B984639 /* [CP] Check Pods Manifest.lock */,
 				71505DA4286F4ABD00BCD741 /* Sources */,
 				71505DA5286F4ABD00BCD741 /* Frameworks */,
 				71505DA6286F4ABD00BCD741 /* Resources */,
+				9DDCE4C08E17791ACBFF170C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,6 +235,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 71505D9F286F4ABD00BCD741;
 			productRefGroup = 71505DA9286F4ABD00BCD741 /* Products */;
@@ -126,23 +253,86 @@
 			buildActionMask = 2147483647;
 			files = (
 				71505DB3286F4ABE00BCD741 /* Preview Assets.xcassets in Resources */,
+				711B765B286F519F00404846 /* Localizable.strings in Resources */,
 				71505DB0286F4ABE00BCD741 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9DDCE4C08E17791ACBFF170C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneLink/Pods-OneLink-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneLink/Pods-OneLink-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneLink/Pods-OneLink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3F537926D51E3CC3B984639 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneLink-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		71505DA4286F4ABD00BCD741 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71505DAE286F4ABD00BCD741 /* ContentView.swift in Sources */,
+				7190E3282873063800E7FC68 /* LinkRow.swift in Sources */,
+				711B7660286F524100404846 /* StringExtension.swift in Sources */,
+				711B7658286F4D0C00404846 /* Link.swift in Sources */,
+				71623B8428706D3700BF4236 /* FloatingButton.swift in Sources */,
+				71623B8828717B4600BF4236 /* TypeTextField.swift in Sources */,
+				71623B8628717A8500BF4236 /* ColorExtension.swift in Sources */,
+				71623B8228706D0800BF4236 /* AddView.swift in Sources */,
+				71505DAE286F4ABD00BCD741 /* HomeView.swift in Sources */,
 				71505DAC286F4ABD00BCD741 /* OneLinkApp.swift in Sources */,
+				711B7662286F5AA700404846 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		711B765D286F519F00404846 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				711B765C286F519F00404846 /* ko */,
+				711B765E286F51A200404846 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		71505DB4286F4ABE00BCD741 /* Debug */ = {
@@ -195,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,6 +451,7 @@
 		};
 		71505DB7286F4ABE00BCD741 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9E22AEF433D9E22C07D2C1B /* Pods-OneLink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +481,7 @@
 		};
 		71505DB8286F4ABE00BCD741 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7402A60496A8A6EBD3D48D0D /* Pods-OneLink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

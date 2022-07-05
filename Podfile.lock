@@ -1,0 +1,26 @@
+PODS:
+  - Realm (10.24.2):
+    - Realm/Headers (= 10.24.2)
+  - Realm/Headers (10.24.2)
+  - RealmSwift (10.24.2):
+    - Realm (= 10.24.2)
+  - Toaster (2.3.0)
+
+DEPENDENCIES:
+  - RealmSwift
+  - Toaster
+
+SPEC REPOS:
+  trunk:
+    - Realm
+    - RealmSwift
+    - Toaster
+
+SPEC CHECKSUMS:
+  Realm: c8421eee9ff92b16b4f91a313b5cc695c37c1921
+  RealmSwift: 10ed6fa09c36aaaff55e12afdc71802ec3ddb1c0
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+
+PODFILE CHECKSUM: b8ad0aac1e2c2e44224a175153ebec8f15af618d
+
+COCOAPODS: 1.11.2
