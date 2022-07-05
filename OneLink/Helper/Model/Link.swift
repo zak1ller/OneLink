@@ -39,9 +39,7 @@ extension Link {
     } else if let error = checkDescriptionStringSize(description: description) {
       return error
     }
-    
-    guard let _ = URL(string: link) else { return "InvalidUrlErrorMessage".localized() }
-   
+  
     let data = Link()
     data.link = link
     data.linkDescription = description
@@ -106,7 +104,9 @@ extension Link {
   }
   
   func openURL() -> String? {
-    guard let url = URL(string: link) else {
+    let encodedString = link.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+   
+    guard let url = URL(string: encodedString) else {
       return "InvalidUrlMessage".localized()
     }
     

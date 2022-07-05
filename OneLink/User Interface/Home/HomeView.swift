@@ -19,10 +19,7 @@ struct HomeView: View {
   var body: some View {
     NavigationView {
       ZStack {
-        NavigationLink(destination: AddView(showingAddView: $showingEditView,
-                                            isEditMode: true,
-                                            beforeLink: beforeLink),
-                       isActive: $showingEditView) { EmptyView() }
+        editView
         linkListView
         addButton
       }
@@ -37,12 +34,20 @@ struct HomeView: View {
 }
 
 extension HomeView {
+  var editView: some View {
+    NavigationLink(destination: AddView(showingAddView: $showingEditView,
+                                        isEditMode: true,
+                                        beforeLink: beforeLink),
+                   isActive: $showingEditView) { EmptyView() }
+  }
+  
   var linkListView: some View {
     List {
       ForEach(manager.links) { link in
         LinkRow(link: link)
           .listRowSeparator(.hidden)
           .listRowInsets(EdgeInsets())
+          .onTapGesture { openURL(link: link) }
           .contextMenu {
             Button(action: {
               shareLink(link: link)
@@ -51,8 +56,7 @@ extension HomeView {
             })
             
             Button(action: {
-              self.beforeLink = link
-              showingEditView = true
+              editLink(link: link)
             }, label: {
               Label("EditLinkButton".localized(), systemImage: "square.and.pencil")
             })
@@ -97,6 +101,11 @@ extension HomeView {
   func shareLink(link: Link) {
     let AV = UIActivityViewController(activityItems: [link.link], applicationActivities: nil)
     UIApplication.shared.currentUIWindow()?.rootViewController?.present(AV, animated: true, completion: nil)
+  }
+  
+  func editLink(link: Link) {
+    beforeLink = link
+    showingEditView = true
   }
   
   func removeLink(link: Link) {

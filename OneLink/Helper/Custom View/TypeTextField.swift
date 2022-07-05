@@ -46,7 +46,8 @@ struct TypeTextField: View {
           .focused(isFocused)
           .font(.system(size: 14).weight(.regular))
           .padding(.leading, 16)
-          .padding(.trailing, 16)
+          .padding(.trailing, isFocused.wrappedValue ? 32 : 16)
+          .showClearButton($text, isFocused: isFocused)
         })
         .frame(height: 40)
     }
