@@ -8,3 +8,8 @@
 "SaveButton" = "Save";
 "AddFavorateMessage" = "Favorites for the item have been activated.";
 "InvalidUrlErrorMessage" = "Invalid url. Please enter the correct url.";
+"InvalidUrlMessage" = "Invalid url.";
+"EditLinkButton" = "Edit";
+"DeleteLinkButton" = "Delete";
+"ShareLinkButton" = "Share";
+"SavedMessage" = "Saved.";

@@ -81,6 +81,20 @@ extension Link {
     }
   }
   
+  func edit(newLink: String, newDescription: String) -> String? {
+    if let error = Link.checkLinkStringSize(link: newLink) {
+      return error
+    } else if let error = Link.checkDescriptionStringSize(description: newDescription) {
+      return error
+    } else {
+      try! Realm().write {
+        self.link = newLink
+        self.linkDescription = newDescription
+      }
+      return nil
+    }
+  }
+  
   func toggleFavorite() {
     try! Realm().write {
       if self.isFavorite {
@@ -89,6 +103,20 @@ extension Link {
         self.isFavorite = true
       }
     }
+  }
+  
+  func openURL() -> String? {
+    guard let url = URL(string: link) else {
+      return "InvalidUrlMessage".localized()
+    }
+    
+    if !UIApplication.shared.canOpenURL(url) {
+      return "InvalidUrlMessage".localized()
+    }
+    
+    UIApplication.shared.open(url)
+    
+    return nil
   }
 }
 

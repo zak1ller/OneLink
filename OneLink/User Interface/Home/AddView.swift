@@ -12,17 +12,25 @@ struct AddView: View {
   @State private var link = ""
   @State private var description = ""
   @State private var showingErrorMessageAlert = false
-  @State private var showingCompleteMessageAlert = false
+  @State private var showingCompleteRegisterMessageAlert = false
+  @State private var showingCompleteEditMessageAlert = false
   @State private var alertErrorMessage = ""
   @Binding private var showingAddView: Bool
   
   @FocusState private var linkFocused: Bool
   @FocusState private var descriptionFocused: Bool
   
+  private var isEditMode: Bool
+  private var beforeLink: Link?
+  
   init(
-    showingAddView: Binding<Bool>
+    showingAddView: Binding<Bool>,
+    isEditMode: Bool = false,
+    beforeLink: Link? = nil
   ) {
     self._showingAddView = showingAddView
+    self.isEditMode = isEditMode
+    self.beforeLink = beforeLink
   }
   
   var body: some View {
@@ -37,12 +45,19 @@ struct AddView: View {
     }, message: {
       Text(alertErrorMessage)
     })
-    .alert("Alert".localized(), isPresented: $showingCompleteMessageAlert, actions: {
+    .alert("Alert".localized(), isPresented: $showingCompleteRegisterMessageAlert, actions: {
       Button("Confirm".localized(), role: .cancel) {
         showingAddView = false
       }
     }, message: {
       Text("NewLinkAdded".localized())
+    })
+    .alert("Alert".localized(), isPresented: $showingCompleteEditMessageAlert, actions: {
+      Button("Confirm".localized(), role: .cancel) {
+        showingAddView = false
+      }
+    }, message: {
+      Text("SavedMessage".localized())
     })
     .toolbar {
       ToolbarItem(placement: .navigationBarTrailing) {
@@ -57,8 +72,14 @@ struct AddView: View {
     .padding(.leading, 24)
     .padding(.trailing, 24)
     .onAppear {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { // Navigation 애니메이션이 끝나야 실행 됨..
-        linkFocused = true
+      if isEditMode {
+        guard let beforeLink = beforeLink else { return }
+        link = beforeLink.link
+        description = beforeLink.linkDescription
+      } else {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { // Navigation 애니메이션이 끝나야 실행 됨..
+          self.linkFocused = true
+        }
       }
     }
   }
@@ -80,14 +101,27 @@ extension AddView {
                   isFocused: $descriptionFocused,
                   onCommittedAction: { save() })
   }
-  
+}
+
+extension AddView {
   func save() {
-    if let error = Link.addLink(link: link, description: description) {
-      showingErrorMessageAlert = true
-      alertErrorMessage = error
+    if isEditMode {
+      guard let beforeLink = beforeLink else { return }
+      if let error = beforeLink.edit(newLink: link, newDescription: description) {
+        showingErrorMessageAlert = true
+        alertErrorMessage = error
+      } else {
+        manager.links = Link.getLinks()
+        showingCompleteEditMessageAlert = true
+      }
     } else {
-      manager.links = Link.getLinks()
-      showingCompleteMessageAlert = true
+      if let error = Link.addLink(link: link, description: description) {
+        showingErrorMessageAlert = true
+        alertErrorMessage = error
+      } else {
+        manager.links = Link.getLinks()
+        showingCompleteRegisterMessageAlert = true
+      }
     }
   }
 }

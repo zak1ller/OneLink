@@ -14,16 +14,13 @@ struct LinkRow: View {
   
   var body: some View {
     VStack(alignment: .leading) {
+      Spacer().frame(height: 16)
       HStack {
         descriptionText
         Spacer()
         favoriteImage
       }
-      .padding(.top, 16)
       .padding(.trailing, 16)
-      
-      Spacer().frame(height: 8)
-      linkText
       Spacer().frame(height: 16)
     }
     .fixedSize(horizontal: false, vertical: true)
@@ -35,17 +32,9 @@ struct LinkRow: View {
 }
 
 extension LinkRow {
-  var linkText: some View {
-    Text(link.link)
-      .font(.system(size: 14, weight: .regular))
-      .padding(.leading, 16)
-      .padding(.trailing, 16)
-      .lineLimit(1)
-  }
-  
   var descriptionText: some View {
     Text(link.linkDescription)
-      .font(.system(size: 14, weight: .bold))
+      .font(.system(size: 14, weight: .medium))
       .padding(.leading, 16)
       .padding(.trailing, 16)
   }

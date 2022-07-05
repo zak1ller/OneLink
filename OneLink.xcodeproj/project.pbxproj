@@ -20,6 +20,7 @@
 		71623B8428706D3700BF4236 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71623B8328706D3700BF4236 /* FloatingButton.swift */; };
 		71623B8628717A8500BF4236 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71623B8528717A8500BF4236 /* ColorExtension.swift */; };
 		71623B8828717B4600BF4236 /* TypeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71623B8728717B4600BF4236 /* TypeTextField.swift */; };
+		71770CDD28742E1F00A901CA /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71770CDC28742E1F00A901CA /* UIApplicationExtension.swift */; };
 		7190E3282873063800E7FC68 /* LinkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7190E3272873063800E7FC68 /* LinkRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		71623B8328706D3700BF4236 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		71623B8528717A8500BF4236 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		71623B8728717B4600BF4236 /* TypeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTextField.swift; sourceTree = "<group>"; };
+		71770CDC28742E1F00A901CA /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		7190E3272873063800E7FC68 /* LinkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRow.swift; sourceTree = "<group>"; };
 		7402A60496A8A6EBD3D48D0D /* Pods-OneLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneLink.release.xcconfig"; path = "Target Support Files/Pods-OneLink/Pods-OneLink.release.xcconfig"; sourceTree = "<group>"; };
 		B6F57C7C5935456AC4A230EE /* Pods_OneLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 			children = (
 				711B765F286F524100404846 /* StringExtension.swift */,
 				71623B8528717A8500BF4236 /* ColorExtension.swift */,
+				71770CDC28742E1F00A901CA /* UIApplicationExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				71623B8428706D3700BF4236 /* FloatingButton.swift in Sources */,
 				71623B8828717B4600BF4236 /* TypeTextField.swift in Sources */,
 				71623B8628717A8500BF4236 /* ColorExtension.swift in Sources */,
+				71770CDD28742E1F00A901CA /* UIApplicationExtension.swift in Sources */,
 				71623B8228706D0800BF4236 /* AddView.swift in Sources */,
 				71505DAE286F4ABD00BCD741 /* HomeView.swift in Sources */,
 				71505DAC286F4ABD00BCD741 /* OneLinkApp.swift in Sources */,
