@@ -1,38 +1,27 @@
 //
-//  ContentView.swift
+//  SearchView.swift
 //  OneLink
 //
-//  Created by Min-Su Kim on 2022/07/02.
+//  Created by Min-Su Kim on 2022/07/06.
 //
 
 import SwiftUI
-import RealmSwift
 
-struct HomeView: View {
+struct SearchView: View {
   @EnvironmentObject private var manager: Manager
-  @State private var showingAddView = false
-  @State private var showingEditView = false
-  @State private var showingSearchView = false
+  @State private var searchText: String = ""
+  @State private var showingEditView: Bool = false
   @State private var showingErrorMessageAlert = false
   @State private var alertErrorMessage = ""
   @State private var beforeLink: Link?
-  @State private var searchText: String = ""
   
   var body: some View {
-    NavigationView {
-      ZStack {
-        editView
-        linkListView
-        addButton
-      }
-      .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
-          searchButton
-        }
-      }
-      .navigationTitle("HomeNavTitle".localized())
+    ZStack {
+      editView
+      linkListView
     }
-    .navigationViewStyle(.stack)
+    .navigationTitle(Text("Search".localized()))
+    .navigationBarTitleDisplayMode(.inline)
     .alert("Alert".localized(), isPresented: $showingErrorMessageAlert, actions: {
       Button("Confirm".localized(), role: .cancel) {}
     }, message: {
@@ -41,18 +30,7 @@ struct HomeView: View {
   }
 }
 
-extension HomeView {
-  var searchButton: some View {
-    NavigationLink(destination: SearchView(), isActive: $showingSearchView) {
-      Button(action: {
-        showingSearchView = true
-      }) {
-        Image(systemName: "magnifyingglass")
-          .foregroundColor(.black)
-      }
-    }
-  }
-  
+extension SearchView {
   var editView: some View {
     NavigationLink(destination: AddView(showingAddView: $showingEditView,
                                         isEditMode: true,
@@ -62,7 +40,7 @@ extension HomeView {
   
   var linkListView: some View {
     List {
-      ForEach(manager.links) { link in
+      ForEach(Link.searchLinks($searchText.wrappedValue)) { link in
         LinkRow(link: link)
           .onTapGesture { openURL(link: link) }
           .contextMenu {
@@ -77,7 +55,7 @@ extension HomeView {
             }, label: {
               Label("EditLinkButton".localized(), systemImage: "square.and.pencil")
             })
-           
+            
             Button(action: {
               removeLink(link: link)
             }, label: {
@@ -86,28 +64,13 @@ extension HomeView {
           }
       }
     }
+    .searchable(text: $searchText)
     .listStyle(.plain)
     .clipped()
   }
-  
-  var addButton: some View {
-    VStack {
-      Spacer()
-      HStack {
-        Spacer()
-        NavigationLink(destination: AddView(showingAddView: $showingAddView), isActive: $showingAddView) {
-          FloatingButton("plus") {
-            self.showingAddView = true
-          }
-        }
-        .padding(.trailing, 24)
-        .padding(.bottom, 24)
-      }
-    }
-  }
 }
 
-extension HomeView {
+extension SearchView {
   func openURL(link: Link) {
     if let error = link.openURL() {
       showingErrorMessageAlert = true

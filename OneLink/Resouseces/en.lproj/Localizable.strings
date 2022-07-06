@@ -2,6 +2,8 @@
 "DescriptionShortSizeErrorMessage" = "The description is too short. Please enter at least one character.";
 "DescriptionLongSizeErrorMessage" = "The description is too long. Please enter up to 100 characters.";
 "HomeNavTitle" = "My linkgs";
+"TypeLinkText" = "Link";
+"TypeDescriptionText" = "Description";
 "Confirm" = "Confirm";
 "Alert" = "Alert";
 "NewLinkAdded" = "A new link has been registered.";
@@ -12,3 +14,4 @@
 "DeleteLinkButton" = "Delete";
 "ShareLinkButton" = "Share";
 "SavedMessage" = "Saved.";
+"Search" = "Search";

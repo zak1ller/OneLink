@@ -35,11 +35,15 @@ struct AddView: View {
   
   var body: some View {
     VStack {
+      Spacer().frame(height: 24)
       linkTextField
       Spacer().frame(height: 24)
       descriptionTextField
       Spacer()
     }
+    .padding(.leading, 16)
+    .padding(.trailing, 16)
+    .navigationBarTitleDisplayMode(.inline)
     .alert("Alert".localized(), isPresented: $showingErrorMessageAlert, actions: {
       Button("Confirm".localized(), role: .cancel) {}
     }, message: {
@@ -69,8 +73,6 @@ struct AddView: View {
         }
       }
     }
-    .padding(.leading, 24)
-    .padding(.trailing, 24)
     .onAppear {
       if isEditMode {
         guard let beforeLink = beforeLink else { return }

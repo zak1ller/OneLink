@@ -33,6 +33,21 @@ extension Link {
     return links
   }
   
+  static func searchLinks(_ searchText: String) -> [Link] {
+    let results = try! Realm().objects(Link.self)
+      .sorted(byKeyPath: "date", ascending: false)
+      .sorted(byKeyPath: "isFavorite", ascending: false)
+      .filter("isDeleted = false")
+      .filter("linkDescription contains '\(searchText)'")
+    
+    var links: [Link] = []
+    for value in results {
+      links.append(value)
+    }
+    
+    return links
+  }
+  
   static func addLink(link: String, description: String) -> String? {
     if let error = checkLinkStringSize(link: link) {
       return error

@@ -23,6 +23,8 @@ struct LinkRow: View {
       .padding(.trailing, 16)
       Spacer().frame(height: 16)
     }
+    .listRowSeparator(.hidden)
+    .listRowInsets(EdgeInsets())
     .fixedSize(horizontal: false, vertical: true)
     .background(Color.secondaryBackground)
     .cornerRadius(16)
